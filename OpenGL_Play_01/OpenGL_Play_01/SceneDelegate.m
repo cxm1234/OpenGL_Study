@@ -7,6 +7,7 @@
 
 #import "SceneDelegate.h"
 #import "GLKViewController.h"
+#import <GLKit/GLKit.h>
 
 @interface SceneDelegate ()
 
@@ -23,6 +24,8 @@
     self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
     
     GLKViewController *glkVC = [[GLKViewController alloc] init];
+    
+//    glkVC.view = [GLKView alloc] initWithFrame:<#(CGRect)#>
     
     glkVC.view.backgroundColor = UIColor.redColor;
     

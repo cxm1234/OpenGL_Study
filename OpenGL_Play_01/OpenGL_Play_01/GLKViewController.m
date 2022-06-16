@@ -6,6 +6,7 @@
 //
 
 #import "GLKViewController.h"
+#import <GLKit/GLKit.h>
 
 @interface GLKViewController ()
 
@@ -16,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    GLKView * view = (GLKView *)self.view;
+    
+    
 }
 
 /*
