@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="avJ-kK-bZI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GLKit View Controller-->
+        <scene sceneID="MPz-pO-mmU">
+            <objects>
+                <glkViewController preferredFramesPerSecond="60" id="avJ-kK-bZI" customClass="ViewController" customModule="OpenGLKit_Demo_01" customModuleProvider="target" sceneMemberID="viewController">
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="xCX-9w-fyx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fzT-JY-zrg"/>
+                        <connections>
+                            <outlet property="delegate" destination="avJ-kK-bZI" id="aiS-1p-eJC"/>
+                        </connections>
+                    </glkView>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fij-R8-161" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="-135"/>
+        </scene>
+    </scenes>
+</document>
