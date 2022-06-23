@@ -30,6 +30,10 @@ class ViewController: GLKViewController {
         2, 3, 0
     ]
     
+    private var effect = GLKBaseEffect()
+    
+    private var rotation: Float = 0.0
+    
     private var ebo = GLuint()
     private var vbo = GLuint()
     private var vao = GLuint()
@@ -43,6 +47,22 @@ class ViewController: GLKViewController {
     override func glkView(_ view: GLKView, drawIn rect: CGRect) {
         glClearColor(0.85, 0.85, 0.85, 1.0)
         glClear(GLbitfield(GL_COLOR_BUFFER_BIT))
+        effect.prepareToDraw()
+        
+        glBindVertexArrayOES(vao)
+        glDrawElements(
+            GLenum(GL_TRIANGLES),
+            GLsizei(indices.count),
+            GLenum(GL_UNSIGNED_BYTE),
+            nil
+        )
+        glBindVertexArrayOES(0)
+        
+        
+    }
+    
+    deinit {
+        tearDownGL()
     }
     
     private func setupGL() {
@@ -67,6 +87,7 @@ class ViewController: GLKViewController {
         
         glGenBuffers(1, &vbo)
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), vbo)
+        
         glBufferData(GLenum(GL_ARRAY_BUFFER),
                      vertices.size(),
                      vertices,
@@ -111,12 +132,35 @@ class ViewController: GLKViewController {
         
     }
 
-    
+    private func tearDownGL() {
+        EAGLContext.setCurrent(context)
+        
+        glDeleteBuffers(1, &vao)
+        glDeleteBuffers(1, &vbo)
+        glDeleteBuffers(1, &ebo)
+        
+        EAGLContext.setCurrent(nil)
+        
+        context = nil
+    }
 
 }
 
 extension ViewController: GLKViewControllerDelegate {
+    
     func glkViewControllerUpdate(_ controller: GLKViewController) {
+        
+        let aspect = fabsf(Float(view.bounds.size.width) / Float(view.bounds.size.height))
+        let projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65.0), aspect, 4.0, 10.0)
+        effect.transform.projectionMatrix = projectionMatrix
+        
+        var modelViewMatrix = GLKMatrix4MakeTranslation(0.0, 0.0, -6.0)
+        
+        rotation += 90 * Float(timeSinceLastUpdate)
+        
+        modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, GLKMathDegreesToRadians(rotation), 0, 0, 1)
+        
+        effect.transform.modelviewMatrix = modelViewMatrix
         
     }
 }
