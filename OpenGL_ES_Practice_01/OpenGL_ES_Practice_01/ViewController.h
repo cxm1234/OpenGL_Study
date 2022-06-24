@@ -5,15 +5,18 @@
 //  Created by  generic on 2022/6/23.
 //
 
-#import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
+
+@class AGLKVertexAttribArrayBuffer;
 
 @interface ViewController : GLKViewController
 {
-    GLuint vertexBufferID;
+    AGLKVertexAttribArrayBuffer *vertexBuffer;
 }
 
 @property (strong, nonatomic) GLKBaseEffect *baseEffect;
+
+@property (strong, nonatomic) AGLKVertexAttribArrayBuffer *vertexBuffer;
 
 @end
 

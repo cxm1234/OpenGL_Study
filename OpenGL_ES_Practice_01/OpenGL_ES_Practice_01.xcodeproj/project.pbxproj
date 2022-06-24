@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311EC3662865503C00D28889 /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 311EC3652865503C00D28889 /* AGLKVertexAttribArrayBuffer.m */; };
 		31F7374E2864552300DCAA5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F7374D2864552300DCAA5E /* AppDelegate.m */; };
 		31F737512864552300DCAA5E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F737502864552300DCAA5E /* SceneDelegate.m */; };
 		31F737542864552300DCAA5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F737532864552300DCAA5E /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		311EC3642865503C00D28889 /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
+		311EC3652865503C00D28889 /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
 		31F737492864552300DCAA5E /* OpenGL_ES_Practice_01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGL_ES_Practice_01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31F7374C2864552300DCAA5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		31F7374D2864552300DCAA5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 				31F737662864761B00DCAA5E /* AGLKContext.m */,
 				31F737522864552300DCAA5E /* ViewController.h */,
 				31F737532864552300DCAA5E /* ViewController.m */,
+				311EC3642865503C00D28889 /* AGLKVertexAttribArrayBuffer.h */,
+				311EC3652865503C00D28889 /* AGLKVertexAttribArrayBuffer.m */,
 				31F737552864552300DCAA5E /* Main.storyboard */,
 				31F737582864552600DCAA5E /* Assets.xcassets */,
 				31F7375A2864552600DCAA5E /* LaunchScreen.storyboard */,
@@ -155,6 +160,7 @@
 				31F737542864552300DCAA5E /* ViewController.m in Sources */,
 				31F7374E2864552300DCAA5E /* AppDelegate.m in Sources */,
 				31F7375F2864552600DCAA5E /* main.m in Sources */,
+				311EC3662865503C00D28889 /* AGLKVertexAttribArrayBuffer.m in Sources */,
 				31F737512864552300DCAA5E /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
