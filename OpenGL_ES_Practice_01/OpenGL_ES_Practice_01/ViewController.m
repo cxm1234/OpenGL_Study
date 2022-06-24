@@ -16,14 +16,15 @@
 
 typedef struct {
     GLKVector3 positionCoords;
+    GLKVector2 textureCoords; // 纹理坐标
 }
 SceneVertex;
 
 static const SceneVertex vertices[] =
 {
-    {{-0.5f, -0.5f, 0.0}},
-    {{0.5f, -0.5f, 0.0}},
-    {{-0.5f, 0.5f, 0.0}}
+    {{-0.5f, -0.5f, 0.0f}, {0.0f, 0.0f}}, // lower left corner
+    {{0.5f, -0.5f, 0.0f}, {1.0f, 0.0f}}, // lower right corner
+    {{-0.5f, 0.5f, 0.0f}, {0.0f, 1.0f}}, // upper left corner
 };
 
 - (void)viewDidLoad {
@@ -31,6 +32,8 @@ static const SceneVertex vertices[] =
     // Do any additional setup after loading the view.
     
     GLKView * view = (GLKView *)self.view;
+    NSAssert([view isKindOfClass:[GLKView class]], @"View Controller's view is not a GLKView");
+    
     
     view.context = [[AGLKContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     
@@ -48,6 +51,14 @@ static const SceneVertex vertices[] =
                          bytes:vertices
                          usage:GL_STATIC_DRAW];
     
+    // Setup texture
+    CGImageRef imageRef = [[UIImage imageNamed:@"leaves.gif"] CGImage];
+    
+    GLKTextureInfo *textureInfo = [GLKTextureLoader textureWithCGImage:imageRef options:nil error:nil];
+    
+    self.baseEffect.texture2d0.name = textureInfo.name;
+    self.baseEffect.texture2d0.target = textureInfo.target;
+    
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
@@ -60,6 +71,11 @@ static const SceneVertex vertices[] =
      prepareToDrawWithAttrib:GLKVertexAttribPosition
      numberOfCoordinates:3
      attribOffset:offsetof(SceneVertex, positionCoords)
+     shouldEnable:YES];
+    [self.vertexBuffer
+     prepareToDrawWithAttrib:GLKVertexAttribTexCoord0
+     numberOfCoordinates:2
+     attribOffset:offsetof(SceneVertex, textureCoords)
      shouldEnable:YES];
     
     [self.vertexBuffer
