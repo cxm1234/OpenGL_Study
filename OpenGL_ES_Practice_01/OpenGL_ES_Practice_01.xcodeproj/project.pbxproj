@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31056AED2865CA68008772AF /* beetle.png in Resources */ = {isa = PBXBuildFile; fileRef = 31056AEC2865CA68008772AF /* beetle.png */; };
 		311EC3662865503C00D28889 /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 311EC3652865503C00D28889 /* AGLKVertexAttribArrayBuffer.m */; };
 		311EC3682865909B00D28889 /* leaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = 311EC3672865909B00D28889 /* leaves.gif */; };
 		311EC36B2865AEA300D28889 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 311EC36A2865AEA300D28889 /* grid.png */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31056AEC2865CA68008772AF /* beetle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beetle.png; sourceTree = "<group>"; };
 		311EC3642865503C00D28889 /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
 		311EC3652865503C00D28889 /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
 		311EC3672865909B00D28889 /* leaves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = leaves.gif; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				311EC36A2865AEA300D28889 /* grid.png */,
 				311EC3672865909B00D28889 /* leaves.gif */,
+				31056AEC2865CA68008772AF /* beetle.png */,
 				31F737582864552600DCAA5E /* Assets.xcassets */,
 				31F737552864552300DCAA5E /* Main.storyboard */,
 				31F7375A2864552600DCAA5E /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31056AED2865CA68008772AF /* beetle.png in Resources */,
 				31F7375C2864552600DCAA5E /* LaunchScreen.storyboard in Resources */,
 				311EC36B2865AEA300D28889 /* grid.png in Resources */,
 				31F737592864552600DCAA5E /* Assets.xcassets in Resources */,
