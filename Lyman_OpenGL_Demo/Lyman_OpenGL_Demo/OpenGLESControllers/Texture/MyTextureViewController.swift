@@ -18,20 +18,20 @@ class MyTextureViewController: UIViewController {
     // 顶点数组
     var vertices: [SenceVertex] = [
         SenceVertex(
-            positionCoord: GLKVector3Make(-1, 1, 0),
-            textureCoord: GLKVector2Make(0, 1)
+            positionCoord: GLKVector3(v: (-1, 1, 0)),
+            textureCoord: GLKVector2(v:(0, 1))
         ), // 左上角
         SenceVertex(
-            positionCoord: GLKVector3Make(-1, -1, 0),
-            textureCoord: GLKVector2Make(0, 0)
+            positionCoord: GLKVector3(v: (-1, -1, 0)),
+            textureCoord: GLKVector2(v:(0, 0))
         ), // 左下角
         SenceVertex(
-            positionCoord: GLKVector3Make(1, 1, 0),
-            textureCoord: GLKVector2Make(1, 1)
+            positionCoord: GLKVector3(v: (1, 1, 0)),
+            textureCoord: GLKVector2(v:(1, 1))
         ), // 右上角
         SenceVertex(
-            positionCoord: GLKVector3Make(1, -1, 0),
-            textureCoord: GLKVector2Make(1, 0)
+            positionCoord: GLKVector3(v: (1, -1, 0)),
+            textureCoord: GLKVector2(v:(1, 0))
         ) // 右下角
     ]
     
@@ -53,10 +53,8 @@ class MyTextureViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        
+    deinit {
+        EAGLContext.setCurrent(nil)
     }
     
     private func setupUI() {

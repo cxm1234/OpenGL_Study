@@ -11,9 +11,10 @@ class MyHomeTableViewController: UITableViewController {
     
     enum GLStudyStep: String {
     case texture = "纹理渲染"
+    case textureForGLSL = "纹理渲染着色器"
     }
     
-    var studySteps: [GLStudyStep] = [.texture]
+    var studySteps: [GLStudyStep] = [.texture, .textureForGLSL]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class MyHomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return 2
     }
 
     
@@ -54,6 +55,9 @@ class MyHomeTableViewController: UITableViewController {
         switch studySteps[indexPath.row] {
         case .texture:
             let vc = MyTextureViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case .textureForGLSL:
+            let vc = MyTextureForGLSLViewController()
             navigationController?.pushViewController(vc, animated: true)
         }
     }

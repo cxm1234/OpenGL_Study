@@ -16,6 +16,7 @@
 		3147213A286D4B8000A5978B /* MyHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31472139286D4B8000A5978B /* MyHomeTableViewController.swift */; };
 		3147213C286D503A00A5978B /* MyTextureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3147213B286D503A00A5978B /* MyTextureViewController.swift */; };
 		31472140286D7C7400A5978B /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3147213F286D7C7400A5978B /* sample.jpg */; };
+		31472143286DA8AF00A5978B /* MyTextureForGLSLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31472142286DA8AF00A5978B /* MyTextureForGLSLViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		31472139286D4B8000A5978B /* MyHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeTableViewController.swift; sourceTree = "<group>"; };
 		3147213B286D503A00A5978B /* MyTextureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextureViewController.swift; sourceTree = "<group>"; };
 		3147213F286D7C7400A5978B /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
+		31472142286DA8AF00A5978B /* MyTextureForGLSLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextureForGLSLViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		3147213D286D504800A5978B /* OpenGLESControllers */ = {
 			isa = PBXGroup;
 			children = (
+				31472141286DA88000A5978B /* TextureForGLSL */,
 				3147213E286D52B500A5978B /* Texture */,
 			);
 			path = OpenGLESControllers;
@@ -90,6 +93,14 @@
 				3147213B286D503A00A5978B /* MyTextureViewController.swift */,
 			);
 			path = Texture;
+			sourceTree = "<group>";
+		};
+		31472141286DA88000A5978B /* TextureForGLSL */ = {
+			isa = PBXGroup;
+			children = (
+				31472142286DA8AF00A5978B /* MyTextureForGLSLViewController.swift */,
+			);
+			path = TextureForGLSL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31472143286DA8AF00A5978B /* MyTextureForGLSLViewController.swift in Sources */,
 				3147213C286D503A00A5978B /* MyTextureViewController.swift in Sources */,
 				3147213A286D4B8000A5978B /* MyHomeTableViewController.swift in Sources */,
 				31472122286D454300A5978B /* AppDelegate.swift in Sources */,
