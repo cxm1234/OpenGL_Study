@@ -117,7 +117,9 @@ extension MyTextureForGLSLViewController {
         var textureID: GLuint = GLuint()
         glGenTextures(1, &textureID)
         glBindTexture(GLenum(GL_TEXTURE_2D), textureID)
-//        glTexImage2D(GLenum(GL_TEXTURE_2D), 0, GL_RGBA, width, <#T##height: GLsizei##GLsizei#>, <#T##border: GLint##GLint#>, <#T##format: GLenum##GLenum#>, <#T##type: GLenum##GLenum#>, <#T##pixels: UnsafeRawPointer!##UnsafeRawPointer!#>)
+        glTexImage2D(GLenum(GL_TEXTURE_2D), 0, GL_RGBA, GLsizei(width), GLsizei(height), 0, GLenum(GL_RGBA), GLenum(GL_UNSIGNED_BYTE), imageDataPointer)
+        
+        
         
         
         
