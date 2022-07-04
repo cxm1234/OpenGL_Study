@@ -123,8 +123,6 @@ class MyTextureForGLSLViewController: UIViewController {
         vertexBuffer = 0
     }
     
-    
-
 }
 
 extension MyTextureForGLSLViewController {
@@ -157,6 +155,7 @@ extension MyTextureForGLSLViewController {
         
         // 绘制图片
         let colorSpace = CGColorSpaceCreateDeviceRGB()
+        // 开辟内存空间
         let imageDataPointer = calloc(Int(width) * Int(height) * MemoryLayout<GLuint>.size, MemoryLayout<GLuint>.size)
         let context = CGContext(
             data: imageDataPointer,

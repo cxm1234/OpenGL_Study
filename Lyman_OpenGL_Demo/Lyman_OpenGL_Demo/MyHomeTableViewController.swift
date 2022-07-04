@@ -12,9 +12,22 @@ class MyHomeTableViewController: UITableViewController {
     enum GLStudyStep: String {
     case texture = "纹理渲染"
     case textureForGLSL = "纹理渲染着色器"
+    case glPaint = "OpenGL绘图板"
+        
+        var viewController: UIViewController {
+            switch self {
+            case .texture:
+                return MyTextureViewController()
+            case .textureForGLSL:
+                return MyTextureForGLSLViewController()
+            case .glPaint:
+                return GLPaintViewController()
+            }
+        }
+        
     }
     
-    var studySteps: [GLStudyStep] = [.texture, .textureForGLSL]
+    var studySteps: [GLStudyStep] = [.texture, .textureForGLSL, .glPaint]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +44,7 @@ class MyHomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
+        return studySteps.count
     }
 
     
@@ -48,18 +61,11 @@ class MyHomeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
         guard indexPath.row < studySteps.count else {
             return
         }
-        switch studySteps[indexPath.row] {
-        case .texture:
-            let vc = MyTextureViewController()
-            navigationController?.pushViewController(vc, animated: true)
-        case .textureForGLSL:
-            let vc = MyTextureForGLSLViewController()
-            navigationController?.pushViewController(vc, animated: true)
-        }
+        let detailVC = studySteps[indexPath.row].viewController
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 
 }

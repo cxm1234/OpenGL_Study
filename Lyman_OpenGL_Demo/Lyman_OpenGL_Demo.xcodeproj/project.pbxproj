@@ -19,6 +19,9 @@
 		3147213C286D503A00A5978B /* MyTextureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3147213B286D503A00A5978B /* MyTextureViewController.swift */; };
 		31472140286D7C7400A5978B /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3147213F286D7C7400A5978B /* sample.jpg */; };
 		31472143286DA8AF00A5978B /* MyTextureForGLSLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31472142286DA8AF00A5978B /* MyTextureForGLSLViewController.swift */; };
+		314A6B532872E48500AD7D11 /* GLPaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A6B522872E48500AD7D11 /* GLPaintViewController.swift */; };
+		314A6B572872E5F100AD7D11 /* GLPaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A6B562872E5F100AD7D11 /* GLPaintView.swift */; };
+		3194E5802872EECB0092E0EE /* paper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3194E57F2872EECB0092E0EE /* paper.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		3147213B286D503A00A5978B /* MyTextureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextureViewController.swift; sourceTree = "<group>"; };
 		3147213F286D7C7400A5978B /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		31472142286DA8AF00A5978B /* MyTextureForGLSLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextureForGLSLViewController.swift; sourceTree = "<group>"; };
+		314A6B522872E48500AD7D11 /* GLPaintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLPaintViewController.swift; sourceTree = "<group>"; };
+		314A6B562872E5F100AD7D11 /* GLPaintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLPaintView.swift; sourceTree = "<group>"; };
+		3194E57F2872EECB0092E0EE /* paper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 		3147213D286D504800A5978B /* OpenGLESControllers */ = {
 			isa = PBXGroup;
 			children = (
+				314A6B512872E1FF00AD7D11 /* Paint */,
+				314A6B502872C9B700AD7D11 /* Retouch */,
 				31472141286DA88000A5978B /* TextureForGLSL */,
 				3147213E286D52B500A5978B /* Texture */,
 			);
@@ -115,6 +123,47 @@
 				31472142286DA8AF00A5978B /* MyTextureForGLSLViewController.swift */,
 			);
 			path = TextureForGLSL;
+			sourceTree = "<group>";
+		};
+		314A6B502872C9B700AD7D11 /* Retouch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Retouch;
+			sourceTree = "<group>";
+		};
+		314A6B512872E1FF00AD7D11 /* Paint */ = {
+			isa = PBXGroup;
+			children = (
+				3194E57E2872EEBC0092E0EE /* Resources */,
+				314A6B552872E5D400AD7D11 /* View */,
+				314A6B542872E50800AD7D11 /* VC */,
+			);
+			path = Paint;
+			sourceTree = "<group>";
+		};
+		314A6B542872E50800AD7D11 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				314A6B522872E48500AD7D11 /* GLPaintViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		314A6B552872E5D400AD7D11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				314A6B562872E5F100AD7D11 /* GLPaintView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3194E57E2872EEBC0092E0EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3194E57F2872EECB0092E0EE /* paper.jpg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +226,7 @@
 			files = (
 				3147212E286D454500A5978B /* LaunchScreen.storyboard in Resources */,
 				3147212B286D454500A5978B /* Assets.xcassets in Resources */,
+				3194E5802872EECB0092E0EE /* paper.jpg in Resources */,
 				31472129286D454300A5978B /* Main.storyboard in Resources */,
 				3143BE422872831E00F745D6 /* glsl.vsh in Resources */,
 				3143BE402872821800F745D6 /* glsl.fsh in Resources */,
@@ -197,6 +247,8 @@
 				31472122286D454300A5978B /* AppDelegate.swift in Sources */,
 				31472136286D48E800A5978B /* MyHomeNavigationController.swift in Sources */,
 				31472124286D454300A5978B /* SceneDelegate.swift in Sources */,
+				314A6B572872E5F100AD7D11 /* GLPaintView.swift in Sources */,
+				314A6B532872E48500AD7D11 /* GLPaintViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
