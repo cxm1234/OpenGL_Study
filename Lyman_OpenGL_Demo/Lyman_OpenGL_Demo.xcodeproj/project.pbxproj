@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3143BE402872821800F745D6 /* glsl.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 3143BE3F2872821800F745D6 /* glsl.fsh */; };
+		3143BE422872831E00F745D6 /* glsl.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 3143BE412872831E00F745D6 /* glsl.vsh */; };
 		31472122286D454300A5978B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31472121286D454300A5978B /* AppDelegate.swift */; };
 		31472124286D454300A5978B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31472123286D454300A5978B /* SceneDelegate.swift */; };
 		31472129286D454300A5978B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31472127286D454300A5978B /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3143BE3F2872821800F745D6 /* glsl.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = glsl.fsh; sourceTree = "<group>"; };
+		3143BE412872831E00F745D6 /* glsl.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = glsl.vsh; sourceTree = "<group>"; };
 		3147211E286D454300A5978B /* Lyman_OpenGL_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyman_OpenGL_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31472121286D454300A5978B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31472123286D454300A5978B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3143BE3E287281EE00F745D6 /* GLSL */ = {
+			isa = PBXGroup;
+			children = (
+				3143BE3F2872821800F745D6 /* glsl.fsh */,
+				3143BE412872831E00F745D6 /* glsl.vsh */,
+			);
+			path = GLSL;
+			sourceTree = "<group>";
+		};
 		31472115286D454300A5978B = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +111,7 @@
 		31472141286DA88000A5978B /* TextureForGLSL */ = {
 			isa = PBXGroup;
 			children = (
+				3143BE3E287281EE00F745D6 /* GLSL */,
 				31472142286DA8AF00A5978B /* MyTextureForGLSLViewController.swift */,
 			);
 			path = TextureForGLSL;
@@ -164,6 +178,8 @@
 				3147212E286D454500A5978B /* LaunchScreen.storyboard in Resources */,
 				3147212B286D454500A5978B /* Assets.xcassets in Resources */,
 				31472129286D454300A5978B /* Main.storyboard in Resources */,
+				3143BE422872831E00F745D6 /* glsl.vsh in Resources */,
+				3143BE402872821800F745D6 /* glsl.fsh in Resources */,
 				31472140286D7C7400A5978B /* sample.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -131,7 +131,7 @@ extension MyTextureViewController: GLKViewDelegate {
             GLenum(GL_FLOAT),
             GLboolean(false),
             GLsizei(MemoryLayout<SenceVertex>.size),
-            UnsafeRawPointer(bitPattern:MemoryLayout<GLKVector3>.size + 4) 
+            UnsafeRawPointer(bitPattern:MemoryLayout<GLKVector3>.size + 4)
         )
         
         // 开始绘制
